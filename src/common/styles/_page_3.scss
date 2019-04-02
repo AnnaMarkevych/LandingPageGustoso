@@ -1,0 +1,124 @@
+.page-banner {
+  background-image: url("../../assets/img/page-third/page-3.jpg");
+  @include bgBanner;
+  background-position: bottom;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  .pancake {
+    @include corner;
+    @include bgBanner;
+    background-image: url("../../assets/img/page-third/pancake.jpg");
+    position: absolute;
+    top: 18%;
+    left: 15%;
+    width: 30%;
+    height: 70%;
+    }
+  .stars {
+    width: 40px;
+    height: 50%;
+    margin-left: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    & > img {
+        display: block;
+        width: 60%;
+        margin-top: 1rem;
+      }
+    }
+  .corner {
+      position: absolute;
+      top: calc(100% - 60px);
+      left: 0;
+      height: $folderWidth;
+      width: $folderWidth;
+      background:linear-gradient(45deg, transparent 15px, $cornerColor 0);
+    }
+  .pancake-wrapper {
+    width: 35%;
+    height: 70%;
+    position: absolute;
+    top: 18%;
+    left: 45%;
+    background: $cornerColor;
+    .pancake-description {
+      width: 100%;
+      height: 100%;
+      padding: 3rem 4rem;
+      background-image: url("../../assets/img/page-third/windmill.png");
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      .content-header {
+        font-size: 3rem;
+        padding: 0;
+      }
+      .description {
+        margin-top: 5rem;
+      }
+      .slideshow {
+        @include flexRow;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+        margin-top: 10rem;
+      }
+      .slider {
+        @include sliderStyle;
+      }
+      .pager {
+        @include pagerSize;
+        border: 2px solid $pagerColor;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        font-size: 2rem;
+        color: $pagerColor;
+        &:hover {
+          @include hoverTransform;
+          color: $hoverPagerColor;
+          border: 2px solid $hoverPagerColor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .pancake-time-wrapper {
+    position: absolute;
+    left: 70%;
+    top: 10%;
+    width: 225px;
+    height: 225px;
+    background: $cornerColor;
+    box-shadow: -1rem 2rem 10rem 0 $boxshadowTime;
+    .pancake-time {
+      @include  bgBanner;
+      @include flexCol;
+      align-items: center;
+      background-image: url("../../assets/img/page-third/fild.png");
+      width: 100%;
+      height: 100%;
+    }
+    .content-header-subscription {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+    .time {
+      font-size: 8rem;
+      font-family: "Alegreya Bold";
+      letter-spacing: 0.05em;
+      line-height: 1em;
+      color: $timeColor;
+    }
+    .unit {
+      font-family: "Alegreya Bold";
+      font-size: 1.5rem;
+      color: $unitColor;
+      letter-spacing: 0.08em;
+    }
+  }
+}

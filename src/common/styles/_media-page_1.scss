@@ -1,0 +1,133 @@
+@media (max-width: 768px) {
+  .main-banner {
+    width: 767.98px;
+    .page-content {
+      .menu {
+        position: absolute;
+        &-logo {
+          font-size: 2rem;
+          padding: 0 1rem;
+        }
+        &-page {
+          &-item {
+            padding: 0.5rem;
+            &:nth-child(odd):hover {
+              @include hoverBtn;
+            }
+          }
+          .menu-link {
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+          }
+        }
+        &-networks {
+          padding: 0.5rem 0.8rem;
+        }
+        &-networks > img {
+          width: 20%;
+          margin: 0;
+          margin-left: 0.8rem;
+        }
+      }
+      .title {
+        &-header {
+          font-size: 4.5rem;
+        }
+        &-subscription {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .main-banner {
+    width: 360px;
+    .page-content {
+      width: 100%;
+      .menu {
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        &-logo {
+          font-size: 2rem;
+        }
+        &-burger {
+          @include flexCol;
+          background: transparent;
+          border: none;
+          outline: inherit;
+          &-bar {
+            width: 3rem;
+            height: 0.3rem;
+            background: $menuColor;
+            margin: 0.2rem 0;
+          }
+        }
+        &-page {
+          @include hiddenMenu;
+          @include flexCol;
+          transform-origin: top;
+          justify-content: space-between;
+          top: 4rem;
+          height: 50vh;
+          margin-left: 0;
+          &-item {
+            padding: 1rem 3rem;
+            &:nth-child(even) {
+              display: none;
+            }
+            &:hover {
+              @include hoverBtn;
+            }
+          }
+          .menu-link {
+            font-size: 1.6rem;
+          }
+        }
+        &-networks {
+          padding: 0;
+          width: 120px;
+        }
+        &-networks > img {
+          padding: 0;
+          width: 18%;
+        }
+      }
+      .title {
+        width: 100%;
+        &-header {
+          font-size: 3rem;
+        }
+        &-subscription {
+          font-size: 1rem;
+        }
+      }
+      .logo-bread-border > img {
+        width: 60%;
+        transform: translate(33%, 0%);
+      }
+      .logo-bread {
+        @include roundSizeMedia;
+      }
+    }
+  }
+ .menu.opened .menu-page {
+   transform: scaleY(1);
+ }
+}
+
+@media (max-width: 1024px) {
+  .main-banner {
+    .page-content {
+      .menu {
+        &-page {
+          .menu-link {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

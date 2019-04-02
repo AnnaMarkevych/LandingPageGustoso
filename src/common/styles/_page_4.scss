@@ -1,0 +1,190 @@
+.page-fours {
+  background-image: url("../../assets/img/page-fours/placeholder.jpg");
+  height: 100vh;
+  position: relative;
+  @include bgBanner;
+  @include flexRow;
+  .left-content {
+    padding: 0 10rem;
+    background: none;
+    .content-header {
+      color: $cornerColor;
+    }
+    .content-header {
+      &.fours {
+        font-size: 1.8rem;
+        letter-spacing: 0.1em;
+      }
+    }
+    .breakfast-subscription {
+      font-family: "ProximaNova Regular";
+      color: $breakfastSubsrciptionColor;
+      padding: 1rem;
+    }
+    .price {
+      font-family: "Alegreya Regular";
+      color: $priceColor;
+      font-size: 2.5rem;
+      margin-top: 1rem;
+    }
+  }
+  .right-content  {
+    position: relative;
+    .list-wrapper {
+      //display: none;
+      @include absoluteCenter;
+      width: 70%;
+      height: 80%;
+      background: $listWrapperBg;
+      @include corner;
+      outline: 1px dashed $outLineColor;
+      outline-offset: -15px;
+      z-index: 3;
+      .list {
+        width: 100%;
+        height: 100%;
+        @include corner;
+        background-image: url("../../assets/img/page-fours/zerno.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-position-x: 320%;
+        background-position-y: 115%;
+        @include flexCol;
+        justify-content: center;
+        &-year-wrapper {
+          width: 100%;
+          @include flexRow;
+          justify-content: space-around;
+          padding-top: 3rem;
+          .year {
+            text-transform: uppercase;
+            font-family: "Alegreya Bold";
+            color: $yearColor;
+          }
+        }
+        &-emblem-wrapper {
+          @include flexRow;
+          @include flexCenter;
+          padding: 1.5rem;
+          .round {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid $yearColor;
+          }
+          hr {
+            color: $yearColor;
+            height: 1px;
+            width: 35%;
+            margin: 0;
+          }
+          .big-round {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid $yearColor;
+            background-image: url("../../assets/img/page-fours/vector1.png");
+            @include  bgBanner;
+            background-size: 80%;
+          }
+        }
+        .content-header {
+          font-size: 3rem;
+          text-align: center;
+          padding-top: 2rem;
+        }
+        .description {
+          text-align: center;
+          padding: 2rem;
+        }
+        &-btn {
+          @include btnStyle;
+          width: 40%;
+          padding: 1rem 3rem;
+          border: 1px solid $yearColor;
+          color: $btnReadColor;
+          background: none;
+          margin: 3rem auto;
+          text-align: center;
+          &:hover {
+            @include hoverTransform;
+          }
+        }
+      }
+      &-first {
+        //display: none;
+      }
+      &-second {
+        //display: none;
+        position: absolute;
+        top: 52%;
+        left: 55%;
+        transform: translate(-50%,-52.5%);
+        height: 75%;
+        background: $listWrapperBgSecond;
+        box-shadow: inset 0px 5px 15px 5px $boxShadowListWrapper;
+        z-index: 2;
+        .list {
+          &-emblem-wrapper {
+            .big-round-second {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              border: 1px solid $yearColor;
+              background-image: url("../../assets/img/page-fours/vector2.png");
+              @include  bgBanner;
+              background-size: 80%;
+            }
+          }
+          .description {
+            margin-top: 0;
+          }
+          &-btn-second {
+            width: 40%;
+            padding: 1rem 3rem;
+            border: 1px solid $yearColor;
+            @include btnStyle;
+            color: $btnReadColor;
+            background: none;
+            margin: 3rem auto;
+            text-align: center;
+            &:hover {
+              @include hoverTransform;
+            }
+          }
+        }
+      }
+      &-third {
+        position: absolute;
+        top: 53.5%;
+        left: 60%;
+        transform: translate(-50%,-55%);
+        height: 70%;
+        background: $listWrapperBgSecond;
+        box-shadow: inset 0px 5px 15px 5px $boxShadowListWrapper;
+        z-index: 1;
+        .list {
+          .content-header {
+            padding-top: 0;
+          }
+          .description {
+            margin-top: 0;
+            padding: 0 2rem;
+            &-btn {
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+    .corner {
+        position: absolute;
+        top: calc(100% - 60px);
+        left: 0;
+        height: $folderWidth;
+        width: $folderWidth;
+        background:linear-gradient(45deg, transparent 15px, $cornerColor 0);
+      }
+  }
+
+}

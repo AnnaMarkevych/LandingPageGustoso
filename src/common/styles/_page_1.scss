@@ -1,0 +1,120 @@
+.main-banner {
+  background-image: url("../../assets/img/baner.jpg");
+  @include bgBanner;
+  height: 100vh;
+  box-shadow: inset 0 4rem 0 0 $boxShadowMainBanner;
+}
+.page-content {
+  @include pageContent;
+  @include bgGradientMainBanner;
+  height: 100vh;
+  .menu {
+    width: 100%;
+    @include flexRow;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
+    &-burger {
+      display: none;
+    }
+    &-logo {
+      padding: 0 1rem;
+      align-items: center;
+      color: $menuColor;
+      font-family: "Scriptina";
+      font-size: 2.5rem;
+      line-height: 0.6em;
+    }
+    &-page {
+      @include flexRow;
+      justify-content: space-between;
+      text-transform: uppercase;
+      margin-left: 2rem;
+      &-item {
+        padding: 0.5rem 1rem;
+        align-items: center;
+        color: $menuColor;
+        &:nth-child(odd):hover {
+         @include hoverTransform;
+        }
+      }
+      .menu-link {
+        color: $menuColor;
+        cursor: pointer;
+        font-family: "Alegreya Regular", sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.3em;
+      }
+    }
+    &-networks {
+      cursor: pointer;
+      align-items: center;
+      @include flexRow;
+      :hover {
+        @include hoverTransform;
+      }
+    }
+    &-networks > img {
+      width: 14%;
+      display: block;
+      margin: 0 1rem;
+    }
+  }
+  .title {
+    @include absoluteCenter;
+    width: 100%;
+    text-align: center;
+    background: radial-gradient(at center, $bgShadow, transparent);
+    &-header {
+      font-size: 6rem;
+      letter-spacing: 0.06em;
+      padding: 1rem;
+      color: $titleTextColor;
+      font-family: "Playfair Display Bold";
+    }
+    &-subscription {
+      color: $titleTextColor;
+      font-size: 1.5rem;
+      line-height: 1.5em;
+      font-family: "ProximaNova Regular";
+      letter-spacing: 0.1em;
+      padding: 6rem;
+    }
+    &-btn {
+      @include btnStyle;
+      padding: 1rem 3rem;
+      border: 1px solid $titleTextColor;
+      letter-spacing: 0.2em;
+      color: $titleTextColor;
+      border-style: dashed;
+      background: $boxShadowMainBanner;
+      &:hover {
+        @include hoverBtn;
+      }
+    }
+  }
+  .logo-bread-border {
+    @include center;
+  }
+  .logo-bread {
+    @include center;
+    @include roundSize;
+    background: $logoBreadBg;
+    opacity: 0.8;
+  }
+  .logo-bread > img {
+    display: block;
+    width: 70%;
+    @include absoluteCenter;
+  }
+}
+
+
+
+
+
+
+
+
+
+

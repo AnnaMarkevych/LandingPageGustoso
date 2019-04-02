@@ -1,0 +1,181 @@
+.page-fives {
+  background-image: url("../../assets/img/page-fives/page5.jpg");
+  height: 100vh;
+  @include bgBanner;
+  &-content {
+    @include bgGradienPageSecond;
+    @include pageContent;
+  }
+  &-header {
+    text-align: center;
+    background-image: url("../../assets/img/page-third/windmill.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 7%;
+    .content-header {
+      padding-top: 5rem;
+      font-size: 3rem;
+    }
+    .content-header-subscription {
+      letter-spacing: 0.05em;
+      font-size: 0.9rem;
+    }
+  }
+  .content-wrapper {
+    @include flexRow
+    flex-wrap: wrap;
+    height: calc(100% - 143.6px);
+  }
+  .left-content-wrapper {
+    width: 33%;
+    height: 100%;
+    padding: 0;
+    .left-content {
+      background: none;
+      padding-left: 10rem;
+      padding-right: 0;
+      @include flexCol;
+      .ingridients {
+        width: 100%;
+        height: 33%;
+        align-items: center;
+        @include flexCol;
+        .ingridient {
+          @include ingridientSize;
+          box-shadow: 0 1rem 3rem 0 $boxshadowTime;
+          &:hover {
+            @include hoverTransform;
+            cursor: pointer;
+          }
+        }
+        .ingridient-first {
+          background-image: url("../../assets/img/page-fives/corn.jpg");
+          background-position: center;
+          background-position-x: 78%;
+          background-position-y: 114%;
+          background-repeat: no-repeat;
+          background-size: 200%;
+        }
+        .ingridient-header {
+          font-family: "Alegreya Bold";
+          font-size: 1.8rem;
+          letter-spacing: 0.05em;
+          color: $ingridientHeaderColor;
+          padding-top: 1rem;
+        }
+        .ingridient-subscription {
+          font-family: "ProximaNova Regular";
+          font-size: 0.9rem;
+          color: $inridientHeaderSubscription;
+        }
+        .ingridient-second {
+          background-image: url("../../assets/img/page-fives/eggs.jpg");
+          background-repeat: no-repeat;
+          background-position: left;
+          background-position-x: 24%;
+          background-size: 150%;
+        }
+        .ingridient-third {
+          background-image: url("../../assets/img/page-third/slide1.jpg");
+          @include bgBanner;
+        }
+        .ingridient-third {
+          background-image: url("../../assets/img/page-fives/chees.jpg");
+          @include bgBanner;
+        }
+        .ingridient-third {
+          background-image: url("../../assets/img/page-third/slide2.jpg");
+          @include bgBanner;
+        }
+        .ingridient-third {
+          background-image: url("../../assets/img/page-third/slide3.jpg");
+          @include bgBanner;
+        }
+
+      }
+    }
+  }
+  .right-content-wrapper {
+    width: 66%;
+    height: 100%;
+    position: relative;
+    .sendwich {
+      position: absolute;
+      top: 50%;
+      left: 9%;
+      transform: translateY(-50%);
+      width: 68%;
+      height: 75%;
+      background-image: url("../../assets/img/page-fives/sandwich.jpg");
+      @include  bgBanner;
+      border: 8px solid $cornerColor;
+      box-shadow: 0 1rem 3rem 0 $boxshadowTime;
+    }
+    .info-wrapper {
+      @include flexCol;
+      position: absolute;
+      width: 165px;
+      height: 82%;
+      top: 9%;
+      left: 60%;
+      box-shadow: 0 1rem 3rem 0 $boxshadowTime;
+      .info {
+        width: 100%;
+        height: 33%;
+        @include flexCol;
+        @include flexCenter;
+        &:nth-child(1){
+          background: $infoBg;
+        }
+        &:nth-child(2) {
+          margin-top: 0.7%;
+          margin-bottom: 0.3%;
+          background: $infoBg;
+        }
+        &:nth-child(3) {
+          background: $cornerColor;
+        }
+        &.summ-time {
+          background-image: url("../../assets/img/page-third/fild.png");
+          @include bgBanner;
+          .time {
+            color: $timeColor;
+            font-size: 5rem;
+          }
+        }
+        .content-header-subscription {
+          color: $ingridientHeaderColor;
+        }
+        .time {
+          font-size: 4rem;
+          font-family: "Alegreya Bold";
+          letter-spacing: 0.05em;
+          line-height: 1em;
+          color: $timeCookColor;
+        }
+        .unit {
+          font-family: "Alegreya Bold";
+          font-size: 1rem;
+          color: $unitColor;
+          letter-spacing: 0.08em;
+        }
+
+      }
+    }
+    .btn-recipe {
+      @include btnStyle;
+      padding: 1.2rem;
+      border: 1px dashed $timeColor;
+      letter-spacing: 0.1em;
+      color: $timeColor;
+      background: white;
+      position: absolute;
+      top: 81%;
+      left: 5%;
+      &:hover {
+        @include hoverBtn;
+      }
+    }
+
+  }
+}
